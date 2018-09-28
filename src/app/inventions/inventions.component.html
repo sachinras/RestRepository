@@ -7,8 +7,25 @@
 <h2>Bind data using ag grid</h2>
 
 
-    <ag-grid-angular #agGrid style="width: 500px; height: 150px;" class="ag-theme-balham"
+    <ag-grid-angular #agGrid style="width: 100%; height:200px;" class="ag-theme-balham"
                   [gridOptions]="gridOptions"
                   [columnDefs]="columnDefs"
-                  [rowData]="rowData">
+                  [rowData]="rowData"
+                  [enableSorting]="true"
+                  [enableFilter]="true"
+                   >
   </ag-grid-angular>
+
+  <h2>Curd Operations</h2>
+  <button (click)="OnAddRow()">Add New Row</button>
+
+  <h2>Bind wep api data using ag grid</h2>
+
+  <ag-grid-angular #agwepapiGrid style="width: 100%; height:200px;" class="ag-theme-balham"
+  [gridOptions]="webapigridOptions"
+  [columnDefs]="webapicolumndefs"
+  [rowData]="catelogs"
+  [enableSorting]="true"
+  [enableFilter]="true"
+   >
+</ag-grid-angular>
